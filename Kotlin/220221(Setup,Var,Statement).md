@@ -71,11 +71,18 @@ fun add(a: Int, b: Int): Int {
 # val VS var
 > * val(value) == 상수<br/>
 > * var(variable) == 변수
+
+```kotlin
+val a: Int = 10 //정수형 상수 선언 및 초기화
+var b: Int = 9  //정수형 변수 선언 및 초기화
+
+var name: String = "Seon"   //문자열 변수 선언 및 초기화
+```
 ### Kotlin은 자료형을 명시하지 않아도 알아서 적합한 자료형을 할당한다.
 
 ```kotlin
-val a = 10 //정수형 상수 선언
-var b = 9 // 정수형 변수 선언
+val a = 10 //정수형 상수
+var b = 9 // 정수형 변수
 
 a = 100 //Compile Error
 b = 100
@@ -152,16 +159,18 @@ when(score){    //범위 연산자인 "in .."을 사용하여 간단하게 범�
 >- Statement: return값을 반환해줘야 하는 문장. 배정문이 활용될 때 사용
 
 ```kotlin
-var b = when(score){
-    1 -> 1
-    2 -> 2
-    else -> 3   //필수
-}
-```
-```kotlin
+//Expression
 when(score){
     in 90..100 -> println("You are genius")
     in 10..80 -> println("not bad")
     else -> println("okay") //필수 X
         }
+```
+```kotlin
+//Statement
+var b = when(score){
+    1 -> 1
+    2 -> 2
+    else -> 3   //필수
+}
 ```
