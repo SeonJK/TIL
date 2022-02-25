@@ -30,7 +30,7 @@ array.get(0)    //3
 val arrayList = arrayListOf<Int>()
 arrayList.add(10)
 arrayList.add(20)
-//arrayList의 element를 추가하더라도 주소가 변경되는 것이 아니기 때무에 val을 써도 element 추가가능
+//arrayList의 element를 추가하더라도 주소가 변경되는 것이 아니기 때문에 val을 써도 element 추가가능
 
 arrayList = arrayListOf()   //val cannot be reassigned
 ```
@@ -97,9 +97,10 @@ val fullName = name+" "+(lastName?: "No lastName")
 
 ## > !! → null이 들어가지 않음을 컴퓨터에게 명시해주는 연산자
 ```kotlin
+val str = "Seon"
 val mNotNull: String = str!!    //타입 명시는 자유
 val upper = mNotNull.uppercase()
-println(upper)
+println(upper)  //SEON
 
 //email 변수가 null일 경우 let함수 안은 수행X,
 //null이 아닐경우 "my email is tjswhdrbs@naver.com" 출력
@@ -115,16 +116,16 @@ Kotlin에서 클래스 이름은 JAVA와 달리 파일 명과 달라도 생성�
 
 ```kotlin
 class Human constructor(val name: String = "Anonymous"){    //주 생성자(constructor) 정의
-    init{   ...   }  //클래스가 호출될 때 가장 처음 할 행동 정의
-    constructor(name: String, age: Int): this(name){    ...    }       //부 생성자 정의
-    //this()를 써서 주 생성자를 받아와야 부 생성자 정의 가능
+    init{ ... }  //클래스가 호출될 때 가장 처음 할 행동 정의
+    constructor(name: String, age: Int): this(name){ ... }       //부 생성자 정의
+    //부 생성자는 this()를 써서 주 생성자를 받아와야 정의 가능
 }
 
 fun main(){
     //Kotlin은 new 연산자 안써도 됨
     val human = Human()             //주 생성자의 param이 이미 데이터가 있기 때문에 기본 생성자 사용 가능
     val human2 = Human("james")     //주 생성자 사용
-    val human3 = Huma("joyce", 25)  //부 생성장 사용
+    val human3 = Huma("joyce", 25)  //부 생성자 사용
 
     println("this human's name is ${human.name}")   //Anonymous
     println("this human's name is ${human2.name}")  //james
