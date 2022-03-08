@@ -17,9 +17,8 @@ ViewBinding을 설정하게 되면 크게 2가지가 변화한다.<br/>
 1. gradle 추가
 ```groovy
 android{
-    buildFeatures{
-        // 뷰 바인딩 활성화
-        viewBinding = true
+    viewBinding{
+        enabled = true
     }
 }
 ```
@@ -27,6 +26,7 @@ android{
 ```kotlin
 class MainActivity : AppCompatActivity {
     
+    //xml 파일 명에 따라서 "Activity이름Binding"
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity {
 ```kotlin
 class MainFragment : Fragment() {
     
+    // xml 파일 명에 따라서 "Fragment이름Binding"
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
@@ -92,7 +93,7 @@ Fragment는 View보다 더 오래 살아남는다고 한다. 그래서 Binding C
 ```
 
 # DataBinding
-ViewBinding을 구글링하다가 DataBinding이라는 단어도 보게 되었다. 둘다 이름만 봐서는 Binding하는 것인데 무엇인 다른걸까?
+ViewBinding을 구글링하다가 DataBinding이라는 단어도 보게 되었다. 둘다 이름만 봐서는 Binding하는 것인데 무엇이 다른걸까?
 ## > ViewBinding vs DataBinding
 
 기본적으로 DataBinding은 ViewBinding의 역할을 할 수 있다.
