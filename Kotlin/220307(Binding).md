@@ -24,7 +24,7 @@ android{
 ```
 2. Activity
 ```kotlin
-class MainActivity : AppCompatActivity {
+class MainActivity : AppCompatActivity() {
     
     //xml 파일 명에 따라서 "Activity이름Binding"
     private lateinit var binding: ActivityMainBinding

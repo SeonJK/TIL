@@ -36,7 +36,8 @@ arrayList = arrayListOf()   //val cannot be reassigned
 ```
 
 ?? 궁금한 점 ??
-* arrayList는 mutbaleList의 종류인가?
+* arrayList는 mutbaleList의 종류인가?<br/>
+=> 그렇다. arrayList는 mutableList 인터페이스의 구현체이다.
 * 배열은 java의 동적할당처럼 할당하는 방법은 없는가?
 
 # 반복문
