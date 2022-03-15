@@ -14,7 +14,7 @@ Java개발해본 사람은 미치도록 공감할 가장 두려운 Error일 것 
 - Android를 개발할 때 당연히 Android Studio가 편하다고 생각되는 건 Android를 모르는 사람이 봐도 아는 사실이다. <br/> 그럼에도 내가 두 가지를 놓고 고민하는 이유는 현재 나는 Eclipse를 이용하여 **일반 JAVA**를 공부하고 있기 때문이다. IntelliJ를 활용하여 Android 개발이 가능하다는 글을 구글링하다 제목만 스쳐지나가며 봤기 때문에 하나의 IDE로 두 가지 개발이 가능한지 궁금했다.
 
   ### 결론
-  ![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png)
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png" width="40%" height="40%"></img>
   - 나는 어플 배포까지 하지 않고 NDK 사용은 계획에 없기 때문에 **IntelliJ**로 같이 개발해보도록 하겠다.
 
   ### IntelliJ

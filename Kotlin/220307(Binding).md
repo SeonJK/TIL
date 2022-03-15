@@ -108,9 +108,9 @@ DataBinding이 모든 역할을 할 수 있지만, 단순히 findViewById()를 �
 1. gradle 추가
 ```groovy
 android{
-    buildFeatures{
+    dataBinding{
         // 데이터바인딩 활성화
-        dataBinding = true
+        enabled = true
     }
 }
 ```

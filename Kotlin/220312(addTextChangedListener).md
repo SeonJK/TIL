@@ -1,5 +1,5 @@
 # addTextChangedListener
-editText를 사용할 떄 필요한 Listener이다. 여기서는 3가지의 메소드를 오버라이드 해야한다.
+editText를 사용할 때 필요한 Listener이다. 여기서는 3가지의 메소드를 오버라이드 해야한다.
 * beforeTextChanged()<br/>
 텍스트를 입력하기 전에 새 텍스트로 대체될 것임을 알리기 위해 호출되는 메소드
 * onTextChanged()<br/>
