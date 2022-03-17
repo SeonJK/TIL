@@ -3,7 +3,7 @@ Android의 생명주기를 이해하는 것은 앱개발에서 매우 중요하�
 ### why?
 스마트폰은 데스크탑보다 적은 메모리를 사용하기 때문에 프로세스의 상태가 금방 변하기 때문!!
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/android-lifecycle-diagram-04-448x500.png" width="80%" height="90%"></src>
+<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/android-lifecycle-diagram-04-448x500.png" width="80%" height="90%"></img>
 
 사진에 나오는 것처럼 액티비티는 정해진 순서에 따라 구동된다.   
 액티비티가 처음 메모리에 올려지면 차례대로
