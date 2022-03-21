@@ -132,6 +132,14 @@ class MainActivity : AppCompatActivity() {
 3. XML
 ```html
 <layout>
+    <!-- layout에서 사용할 객체 생성 -->
+    <data>
+        <variable
+            name=""
+
+        >
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -143,7 +151,8 @@ class MainActivity : AppCompatActivity() {
     <TextView
         android:id="@+id/textView"
         andorid:lyout_width="wrap_content"
-        andorid:lyout_height="wrap_content" />
+        andorid:lyout_height="wrap_content"
+        android:text="@{data." />
         
     </androidx.constraintlayout.widget.ConstraintLayout>
 
