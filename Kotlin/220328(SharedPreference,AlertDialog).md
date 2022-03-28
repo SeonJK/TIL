@@ -26,6 +26,7 @@ class App : Application() {
 ```
 
 2. MySharedPreferences.kt
+
 ```kotlin
 import android.content.Context
 import android.content.SharedPreferences
@@ -46,12 +47,19 @@ class MySharedPreferences(context: Context) {
         set(value) = prefs.edit().putString(prefsKeyContent, value).apply()
 }
 ```
+
+## > commit과 apply   
+
+* commit은 UI Thread를 잠시 블록하고 내용을 저장한다.
+* apply는 기다리지 않고 비동기로 저장한다.   
+<br/>
+
 # AlertDialog
 경고 메시지를 확실히 띄울 때(?) 쓰는 것 같다. AlertDialog는 Builder를 사용하여 만든다. AlertDialog는 세 가지 버튼을 만들 수 있다.(Neutral, Negative, Positive)
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzDOLs%2Fbtq4rdnnluK%2FshffQkhGsw1FJ9aDkzkyM1%2Fimg.png" hegiht="70%" width="90%"> </img>   
-(출처: [https://black-jin0427.tistory.com/357](https://black-jin0427.tistory.com/357))
-
+(출처: [https://black-jin0427.tistory.com/357](https://black-jin0427.tistory.com/357))   
+<br/>
 
 ```kotlin
 AlertDialog.Builder(this)
@@ -72,7 +80,7 @@ AlertDialog.Builder(this)
 
 # Handler
 스레드를 관리할 때 메인스레드(UI Thread)와 새로운 스레드를 연결이 필요할 때가 있다. 왜냐하면 메인 스레드가 아닌 곳에서는 UI change를 하는 동작을 할 수 없기 때문이다.   
-메인스레드와 새로운 스레드를 Handler를 통해 연결한다.
+Handler는 메인스레드와 새로운 스레드의 연결을 위해 안드로이드가 제공하는 기능이다.
 
 ## > 사용법
 1. 핸들러 선언 및 초기화
