@@ -145,8 +145,6 @@ Room을 사용하기 위해 dependencies 작업을 해주어야 한다.
     }
 
     dependencies {
-        def room_version = "2.4.2"
-
         implementation "androidx.room:room-runtime:$room_version"
         kapt "androidx.room:room-compiler:$room_version"
     }
