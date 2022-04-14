@@ -1,7 +1,7 @@
 # SharedPreference
 
 SharedPreference는 주로 간단한 값을 저장할 때 사용한다. 예를 들어 초기 설정 값이나 자동 로그인 여부 등 옵션 값을 많이 저장한다.   
-저장할 때는 어플리케이션에 파일 형태도 저장되며, 데이터는 (key, value) 형태로 "data/data/패키지명/shared_prefs" 폴더 안에 xml 파일로 저장된다.  
+저장할 때는 어플리케이션에 파일 형태로 저장되며, 데이터는 (key, value) 형태로 "data/data/패키지명/shared_prefs" 폴더 안에 xml 파일로 저장된다.  
 <br/>
 SharedPreference를 사용할 때는 앱에서 전역적으로 사용하기 때문에 싱글톤 패턴을 사용하여 만드는 것이 좋다.
 
