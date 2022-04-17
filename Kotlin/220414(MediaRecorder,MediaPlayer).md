@@ -4,6 +4,12 @@
 
 안드로이드의 보안강화로 API 23부터 마이크와 카메라의 권한을 런타임에 사용자에게 승인을 요청해야 한다. API 28이상부터는 백드라운드에 실행하는 앱은 마이크에 액세스할 수 없다.   
 <br/>
+
+## > 상태
+MediaRecorder는 7가지의 상태를 가지고 있다. (참고: [안드로이드 공식문서](https://developer.android.com/reference/android/media/MediaRecorder))
+
+<img src="https://developer.android.com/images/mediarecorder_state_diagram.gif" height="90%" width="80%">
+
 ## > 권한 요청
 오디오 권한 요청 코드는 다음과 같다.
 ```html
@@ -53,6 +59,11 @@ class MainActivity : AppCompatActivity() {
 # MediaPlayer
 
 녹음된 오디오를 재생시키기 위해 MediaPlayer API를 사용하였다. MediaPlayer API는 저장된 미디어파일(오디오, 동영상, 이미지), 독립형 파일 또는 데이터 스트림을 모두 재생시킬 수 있다.
+
+## > 상태
+MediaPlayer는 10가지 상태를 가지고 있다. (참고: [안드로이드 공식문서](https://developer.android.com/reference/android/media/MediaPlayer))
+
+<img src="https://developer.android.com/images/mediaplayer_state_diagram.gif" height="90%" width="80%">
 
 ## > 권한 요청
 * 인터넷 권한 - 데이터 스트리밍시 필요하다.
