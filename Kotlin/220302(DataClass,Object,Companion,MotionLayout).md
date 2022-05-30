@@ -8,10 +8,11 @@ fun main(){
     val ticketA = Ticket("koreanAir", "JK Seon", "2022-03-02", 14)
     
     println(ticketA)    //Ticket(companyName=koreanAir, name=JK Seon, date=2022-03-02, seatNumber=14)
+}
 ```
 
 # Companion Object
-Static 메소드나 변수를 선언할 때 사용한다. 또한 이를 사용하면 priavate properties를 읽어올 수 있다.
+Static 메소드나 변수를 선언할 때 사용한다. 또한 이를 사용하면 private properties를 읽어올 수 있다.
 
 ```kotlin
 class Book private constructor(val id: Int, val name: String){
