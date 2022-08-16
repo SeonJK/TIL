@@ -131,7 +131,10 @@ class MainActivity : AppCompatActivity() {
 
 3. XML
 ```html
-<layout>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- layout에서 사용할 객체 생성 -->
     <data>
         <variable
@@ -141,18 +144,15 @@ class MainActivity : AppCompatActivity() {
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        andorid:lyout_width="wrap_content"
-        andorid:lyout_height="wrap_content"
-        android:text="@{data." />
+        <TextView
+            android:id="@+id/textView"
+            andorid:lyout_width="wrap_content"
+            andorid:lyout_height="wrap_content"
+            android:text="@{data." />
         
     </androidx.constraintlayout.widget.ConstraintLayout>
 
