@@ -7,6 +7,7 @@ GradientDrawable에 대한 리소스 포인터이다.
 ## > 요소
 1. `<shape>`   
 shapeDrawable의 루트 요소이다.
+
     ```html
     <shape
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,6 +140,7 @@ shape에 대한 테두리 선을 설정한다.
 ## > 사용법
 1. build.gradle   
 Room을 사용하기 위해 dependencies 작업을 해주어야 한다.
+
     ```groovy
     dependencies {
         implementation "androidx.room:room-runtime:$room_version"
@@ -150,6 +152,7 @@ Room을 사용하기 위해 dependencies 작업을 해주어야 한다.
 Entity란 디비에서 한 테이블의 정보를 말하는 정보 단위이다. 디비에 테이블을 만드는 작업과 같다.   
 <br/>
 먼저 java 패키지 폴더 안에 새로운 model 패키지 폴더를 생성한다. model 패키지 안에 원하는 테이블의 이름을 적은 클래스 파일을 만든다.
+
     ```kotlin
     // 계산기 히스토리 테이블
 
@@ -169,6 +172,7 @@ Entity란 디비에서 한 테이블의 정보를 말하는 정보 단위이다.
 DAO란 Data Access Object의 약자로 디비에 접근할 수 있는 메소드를 정의하는 인터페이스를 말한다.   
 <br/>
 DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한다. dao 패키지 폴더 안에 클래스 파일을 생성하여 작업한다.
+
     ```kotlin
     @Dao
     interface HistoryDao {
@@ -185,6 +189,7 @@ DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한�
 
     삽입/수정/삭제는 기본 메소드로 어노테이션만 붙이면 바로 사용할 수 있다. 이외에 다른 기능을 사용하려면 어떻게 해야 할까?   
     다른 기능을 하는 메소드를 사용하고 싶다면 직접 쿼리를 작성하여 만들 수 있다.
+    
     ```kotlin
     @Dao
     interface HistoryDao {
@@ -200,6 +205,7 @@ DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한�
 
 4. Room Database   
 이제 디비를 생성하고 관리하는 데이터베이스 객체를 만들어야 한다. 이 때는 추상 클래스를 사용한다.
+
     ```kotlin
     // entities에는 2.에서 만든 entity를 넣어주면 된다.
     // version은 entity의 구조를 변경해야 할 경우 이전 구조와 현재 구조를 구분할 수 있는 역할을 수행한다.
@@ -217,6 +223,7 @@ DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한�
     ```
 
     공식문서에서는 디비 인스턴스를 만들 때 싱글톤으로 구현하는 것을 권장하고 있다. 싱글톤으로 만들면 신경쓸 부분이 많지만 객체 생성 비용을 줄일 수 있다.
+    
     ```kotlin
     @Database(entities = arrayOf(History::class), version = 1)
     abstract class AppDatabase : RoomDatabase() {
@@ -244,6 +251,7 @@ DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한�
         }
     }    
     ```
+    
     코드를 살펴보면 `@Volatile`을 볼 수 있다.
     이는 Java 변수를 Main Memory에 저장하겠다는 것을 명시하는 어노테이션이다. 변수를 Read할 때마다 CPU Cache가 아닌 Main Memory에서 읽어오겠다는 뜻이다.    
     <br/>
@@ -260,6 +268,7 @@ DAO 파일도 자바 패키지 폴더 안에 dao 패키지 폴더를 생성한�
 
 5. 디비 인스턴스 생성   
 인스턴스 생성은 클래스 파일에서 수행한다. lazy하게 선언해도 된다.
+
     ```kotlin
     // 싱글톤 패턴을 사용하지 않은 경우
     val db = Room.databaseBuilder(
