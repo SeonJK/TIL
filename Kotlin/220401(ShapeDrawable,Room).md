@@ -140,13 +140,9 @@ shape에 대한 테두리 선을 설정한다.
 1. build.gradle   
 Room을 사용하기 위해 dependencies 작업을 해주어야 한다.
     ```groovy
-    plugins {
-        id 'kotlin-kapt'
-    }
-
     dependencies {
         implementation "androidx.room:room-runtime:$room_version"
-        kapt "androidx.room:room-compiler:$room_version"
+        annotationProcessor "androidx.room:room-compiler:$room_version"
     }
     ```
 
